@@ -1,0 +1,13 @@
+[general]
+
+working_directory = "Dev"
+
+[window]
+
+opacity = 0.9
+blur = true
+
+[font]
+
+normal.family = "JetBrainsMono Nerd Font"
+size = 12.0
