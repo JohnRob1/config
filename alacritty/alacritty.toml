@@ -10,4 +10,9 @@ blur = true
 [font]
 
 normal.family = "JetBrainsMono Nerd Font"
-size = 12.0
+size = 10.0
+
+[colors]
+
+vi_mode_cursor = { text = '#000000', cursor = '#d3cdc3' }
+cursor = { text = '#000000', cursor = '#d3cdc3' }
