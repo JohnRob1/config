@@ -4,13 +4,13 @@ working_directory = "Dev"
 
 [window]
 
-opacity = 0.9
+opacity = 0.75
 blur = true
 
 [font]
 
 normal.family = "JetBrainsMono Nerd Font"
-size = 12.0
+size = 14.0
 
 [colors]
 
