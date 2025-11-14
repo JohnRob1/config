@@ -1,18 +1,3 @@
-HISTFILE=~/.zsh_history
-HISTSIZE=1000
-SAVEHIST=1000
-HIST_STAMPS="mm/dd/yyyy"
-
-# Linux >>
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-# Linux <<
-
-# MacOS >>
-# export PATH="/opt/homebrew/opt/bash/bin:$PATH"
-# export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-# export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
-# MacOS <<
-
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
@@ -109,3 +94,22 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+if [[ -n $GHOSTTY_RESOURCES_DIR ]]; then
+  source "$GHOSTTY_RESOURCES_DIR"/shell-integration/zsh/ghostty-integration
+fi
+
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+HIST_STAMPS="mm/dd/yyyy"
+
+# Linux >>
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# Linux <<
+
+# MacOS >>
+# export PATH="/opt/homebrew/opt/bash/bin:$PATH"
+# export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+# export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
+# MacOS <<
