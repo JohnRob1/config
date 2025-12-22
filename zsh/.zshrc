@@ -105,7 +105,7 @@ SAVEHIST=1000
 HIST_STAMPS="mm/dd/yyyy"
 
 # Linux >>
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # Linux <<
 
 # MacOS >>
@@ -116,3 +116,4 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
+. "$HOME/.local/bin/env"
