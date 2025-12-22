@@ -113,3 +113,6 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 # export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
 # MacOS <<
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
