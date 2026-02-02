@@ -20,6 +20,7 @@ return {
     opts = function(_, opts)
       table.insert(opts.sources.default, 'copilot')
 
+      opts.sources.providers = opts.sources.providers or {}
       opts.sources.providers.copilot = {
         name = 'copilot',
         module = 'blink-cmp-copilot',
