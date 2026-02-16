@@ -62,7 +62,7 @@ ZSH_THEME="arrow"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode aws)
+plugins=(git vi-mode aws direnv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -104,16 +104,20 @@ HISTSIZE=1000
 SAVEHIST=1000
 HIST_STAMPS="mm/dd/yyyy"
 
-# Linux >>
-# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-# . "$HOME/.local/bin/env"
-# Linux <<
+if ! command -v direnv &> /dev/null; then
+  brew install direnv
+fi
 
-# MacOS >>
-export PATH="/opt/homebrew/opt/bash/bin:$PATH"
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /opt/homebrew/bin/terraform terraform
-# MacOS <<
+eval "$(direnv hook zsh)"
+
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+  . "$HOME/.local/bin/env"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  export PATH="/opt/homebrew/opt/bash/bin:$PATH"
+  export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+  export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
+  autoload -U +X bashcompinit && bashcompinit
+  complete -o nospace -C /opt/homebrew/bin/terraform terraform
+fi
 

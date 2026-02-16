@@ -21,52 +21,22 @@
       "type": "remote",
       "url": "https://mcp.context7.com/mcp",
       "headers": {
-        "CONTEXT7_API_KEY": "{file:./context7-key}"
+        "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
       }
     },
     "atlassian": {
       "type": "local",
       "command": ["npx", "-y", "mcp-remote", "https://mcp.atlassian.com/v1/sse"]
     },
-    "playwright": {
+    "chrome-devtools": {
       "type": "local",
-      "command": ["npx", "@playwright/mcp@latest", "--browser=msedge"],
-      "enabled": true
+      "command": ["npx", "-y", "chrome-devtools-mcp@latest"]
     }
   },
   "tools": {
     "aws*": false,
-    "context7*": true,
+    "context7*": false,
     "atlassian*": false,
-    "playwright*": false
-  },
-  "agent": {
-    "AWS-Build": {
-      "mode": "primary",
-      "tools": {
-        "aws*": true
-      }
-    },
-    "AWS-Plan": {
-      "mode": "primary",
-      "tools": {
-        "write": false,
-        "edit": false,
-        "aws*": true
-      }
-    },
-    "Playwright": {
-      "mode": "primary",
-      "prompt": "test with playwright* tools",
-      "tools": {
-        "playwright*": true
-      }
-    },
-    "Atlassian": {
-      "mode": "subagent",
-      "tools": {
-        "atlassian*": true
-      }
-    }
+    "chrome-devtools*": false
   }
 }
