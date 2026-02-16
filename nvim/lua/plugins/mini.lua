@@ -1,7 +1,6 @@
 return {
   'echasnovski/mini.nvim',
   config = function()
-    -- CUSTOM >>
     local minifiles = require 'mini.files'
     minifiles.setup {
       options = {
@@ -10,11 +9,8 @@ return {
     }
     vim.keymap.set('n', '\\', function()
       local _ = minifiles.close() or minifiles.open(vim.api.nvim_buf_get_name(0), false)
-      vim.defer_fn(function()
-        minifiles.reveal_cwd()
-      end, 30)
+      vim.defer_fn(function() minifiles.reveal_cwd() end, 30)
     end, { desc = 'Open MiniFiles' })
-    -- CUSTOM <<
 
     require('mini.surround').setup()
 
@@ -24,8 +20,6 @@ return {
     statusline.setup { use_icons = vim.g.have_nerd_font }
 
     ---@diagnostic disable-next-line: duplicate-set-field
-    statusline.section_location = function()
-      return '%2l:%-2v'
-    end
+    statusline.section_location = function() return '%2l:%-2v' end
   end,
 }

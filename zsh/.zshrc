@@ -112,7 +112,6 @@ eval "$(direnv hook zsh)"
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-  . "$HOME/.local/bin/env"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   export PATH="/opt/homebrew/opt/bash/bin:$PATH"
   export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
@@ -120,4 +119,3 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
   autoload -U +X bashcompinit && bashcompinit
   complete -o nospace -C /opt/homebrew/bin/terraform terraform
 fi
-
