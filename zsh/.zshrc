@@ -119,3 +119,6 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
   autoload -U +X bashcompinit && bashcompinit
   complete -o nospace -C /opt/homebrew/bin/terraform terraform
 fi
+
+# opencode
+export PATH=/Users/johnrobinson/.opencode/bin:$PATH
