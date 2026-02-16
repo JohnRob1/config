@@ -50,7 +50,15 @@ return {
     local capabilities = require('blink.cmp').get_lsp_capabilities()
 
     -- Custom options passed to nvim-lspconfig's setup() function
-    local servers = {}
+    local servers = {
+      lua_ls = {},
+      denols = {},
+      pylsp = {},
+      cssls = {},
+      html = {},
+      sqlls = {},
+      csharp_ls = {},
+    }
 
     local ensure_installed = {
       'lua-language-server',

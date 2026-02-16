@@ -17,6 +17,8 @@ return {
       'vim',
       'vimdoc',
       'angular',
+      'typescript',
+      'typescriptreact',
     }
 
     require('nvim-treesitter').setup {
