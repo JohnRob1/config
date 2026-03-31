@@ -24,10 +24,6 @@
         "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
       }
     },
-    "atlassian": {
-      "type": "local",
-      "command": ["npx", "-y", "mcp-remote", "https://mcp.atlassian.com/v1/sse"]
-    },
     "chrome-devtools": {
       "type": "local",
       "command": ["npx", "-y", "chrome-devtools-mcp@latest"]
