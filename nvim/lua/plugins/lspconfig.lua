@@ -58,6 +58,7 @@ return {
       html = {},
       sqlls = {},
       csharp_ls = {},
+      dartls = {},
     }
 
     local ensure_installed = {
@@ -69,6 +70,7 @@ return {
       'css-lsp',
       'html-lsp',
       'sqlls',
+      'dart',
     }
 
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
