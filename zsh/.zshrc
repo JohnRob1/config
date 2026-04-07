@@ -122,3 +122,9 @@ fi
 
 # opencode
 export PATH=/Users/johnrobinson/.opencode/bin:$PATH
+
+## [Completion] 
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /Users/johnrobinson/.dart-cli-completion/zsh-config.zsh ]] && . /Users/johnrobinson/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
