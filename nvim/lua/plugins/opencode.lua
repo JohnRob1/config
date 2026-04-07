@@ -27,8 +27,6 @@ return {
     },
   },
   config = function()
-    local opencode_cmd = 'opencode --port'
-
     -- -- Start server in background on Neovim startup
     -- local server_job
     -- vim.api.nvim_create_autocmd('VimEnter', {
@@ -76,6 +74,8 @@ return {
     --   })
     -- end
 
+    local opencode_cmd = { 'opencode', '--port' }
+
     ---@type snacks.terminal.Opts
     local snacks_terminal_opts = {
       win = {
@@ -93,6 +93,7 @@ return {
     ---@type opencode.Opts
     vim.g.opencode_opts = {
       server = {
+        cmd = opencode_cmd,
         start = function() require('snacks.terminal').open(opencode_cmd, snacks_terminal_opts) end,
         stop = function()
           local terminal = require('snacks.terminal').get(opencode_cmd, vim.tbl_deep_extend('force', {}, snacks_terminal_opts, { create = false }))
