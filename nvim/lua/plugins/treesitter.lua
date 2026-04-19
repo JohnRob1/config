@@ -19,6 +19,8 @@ return {
       'angular',
       'typescript',
       'typescriptreact',
+      'tsx',
+      'svelte',
     }
 
     require('nvim-treesitter').setup {
