@@ -58,7 +58,6 @@ return {
       html = {},
       sqlls = {},
       csharp_ls = {},
-      dartls = {},
       svelteserver = {},
     }
 
@@ -71,7 +70,6 @@ return {
       'css-lsp',
       'html-lsp',
       'sqlls',
-      'dart',
       'svelte-language-server',
     }
 
