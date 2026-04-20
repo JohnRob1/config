@@ -121,7 +121,10 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 # opencode
-export PATH=/Users/johnrobinson/.opencode/bin:$PATH
+export PATH="~/.opencode/bin:$PATH"
+
+# flutter
+export PATH="$HOME/flutter/bin:$PATH"
 
 ## [Completion] 
 ## Completion scripts setup. Remove the following line to uninstall
