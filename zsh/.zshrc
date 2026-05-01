@@ -62,7 +62,7 @@ ZSH_THEME="arrow"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode aws direnv)
+plugins=(git vi-mode aws)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -104,15 +104,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 HIST_STAMPS="mm/dd/yyyy"
 
-if ! command -v direnv &> /dev/null; then
-  brew install direnv
-fi
-
-eval "$(direnv hook zsh)"
-
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-elif [[ "$OSTYPE" == "darwin"* ]]; then
+if [[ "$OSTYPE" == "darwin"* ]]; then
   export PATH="/opt/homebrew/opt/bash/bin:$PATH"
   export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
   export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
