@@ -59,6 +59,7 @@ return {
       sqlls = {},
       csharp_ls = {},
       svelteserver = {},
+      copilot = {},
     }
 
     local ensure_installed = {
@@ -71,6 +72,7 @@ return {
       'html-lsp',
       'sqlls',
       'svelte-language-server',
+      'copilot-language-server',
     }
 
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }

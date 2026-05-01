@@ -2,7 +2,7 @@ return {
   'saghen/blink.cmp',
   event = 'VimEnter',
   version = '1.*',
-   dependencies = {},
+  dependencies = {},
   opts = {
     keymap = { preset = 'default' },
     appearance = { nerd_font_variant = 'mono' },

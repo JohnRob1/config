@@ -1,6 +1,7 @@
 return {
   'nickjvandyke/opencode.nvim',
   version = '*', -- Latest stable release
+  enabled = false,
   dependencies = {
     {
       -- `snacks.nvim` integration is recommended
@@ -28,52 +29,6 @@ return {
   },
   config = function()
     -- -- Start server in background on Neovim startup
-    -- local server_job
-    -- vim.api.nvim_create_autocmd('VimEnter', {
-    --   callback = function()
-    --     if not server_job then
-    --       server_job = vim.fn.jobstart(opencode_cmd, {
-    --         detach = false,
-    --         on_exit = function() server_job = nil end,
-    --       })
-    --     end
-    --   end,
-    -- })
-    --
-    -- -- Stop server when Neovim exits
-    -- vim.api.nvim_create_autocmd('VimLeavePre', {
-    --   callback = function()
-    --     if server_job then
-    --       vim.fn.jobstop(server_job)
-    --       server_job = nil
-    --     end
-    --   end,
-    -- })
-    --
-    -- This functions fixes the delay when opencode first launches causing the cursor to jump back to the Neovim buffer
-    -- local function on_opencode_win(win)
-    --   require('opencode.terminal').setup(win.win)
-    --
-    --   local buf = vim.api.nvim_win_get_buf(win.win)
-    --   vim.api.nvim_clear_autocmds { event = 'TermRequest', buffer = buf }
-    --
-    --   local term_request_auid
-    --   term_request_auid = vim.api.nvim_create_autocmd('TermRequest', {
-    --     buffer = buf,
-    --     callback = function(ev)
-    --       if ev.data.cursor[1] > 1 then
-    --         vim.api.nvim_del_autocmd(term_request_auid)
-    --         vim.schedule(function()
-    --           if win.win and vim.api.nvim_win_is_valid(win.win) then
-    --             vim.api.nvim_set_current_win(win.win)
-    --             vim.cmd 'startinsert'
-    --           end
-    --         end)
-    --       end
-    --     end,
-    --   })
-    -- end
-
     local opencode_cmd = { 'opencode', '--port' }
 
     ---@type snacks.terminal.Opts
