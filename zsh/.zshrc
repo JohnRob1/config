@@ -104,7 +104,9 @@ HISTSIZE=1000
 SAVEHIST=1000
 HIST_STAMPS="mm/dd/yyyy"
 
-if [[ "$OSTYPE" == "darwin"* ]]; then
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
   export PATH="/opt/homebrew/opt/bash/bin:$PATH"
   export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
   export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
