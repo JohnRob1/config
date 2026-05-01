@@ -1,0 +1,12 @@
+[mcp_servers.aws]
+command = "uvx"
+args = ["mcp-proxy-for-aws", "https://aws-mcp.us-east-1.api.aws/mcp"]
+env = { AWS_PROFILE = "{env:AWS_PROFILE}", AWS_ACCESS_KEY_ID = "{env:AWS_ACCESS_KEY_ID}", AWS_SECRET_ACCESS_KEY = "{env:AWS_SECRET_ACCESS_KEY}", AWS_SESSION_TOKEN = "{env:AWS_SESSION_TOKEN}", AWS_REGION = "{env:AWS_REGION}" }
+
+[mcp_servers.context7]
+url = "https://mcp.context7.com/mcp"
+headers = { CONTEXT7_API_KEY = "{env:CONTEXT7_API_KEY}" }
+
+[mcp_servers.chrome-devtools]
+command = "npx"
+args = ["-y", "chrome-devtools-mcp@latest"]

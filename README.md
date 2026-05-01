@@ -3,3 +3,7 @@
 Example: `stow alacritty -t ~/.config/alacritty/` (config @ ~/.config/alacritty/alacritty.toml)
 Example: `stow starship -t ~/.config` (config @ ~/.config/starship.toml)
 Example: `stow tmux -t ~` (config @ ~/.tmux.conf)
+
+# Ruler
+
+Run `ruler apply --agents opencode,gemini` for example to setup ai cli tools

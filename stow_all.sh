@@ -6,11 +6,10 @@ rm -rf ~/.cache/ghostty
 mkdir ~/.config/ghostty
 stow -R ghostty -t ~/.config/ghostty
 
-# opencode
-rm -rf ~/.config/opencode
-rm -rf ~/.cache/opencode
-mkdir ~/.config/opencode
-stow -R opencode -t ~/.config/opencode
+# ruler
+rm -rf ~/.config/ruler
+mkdir -p ~/.config/ruler
+stow -R ruler -t ~/.config/ruler
 
 # nvim
 rm -rf ~/.config/nvim
