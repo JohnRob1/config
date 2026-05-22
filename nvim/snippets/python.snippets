@@ -1,9 +1,0 @@
-snippet mms Mermaid State Machine
-	'''
-	stateDiagram-v2
-		[*] --> ${1:idle}
-		$1 --> ${2:processing} : ${3:start}
-		$2 --> ${4:finished} : ${5:complete}
-		$4 --> ${6:idle} : ${7:reset}
-		$0
-	'''
