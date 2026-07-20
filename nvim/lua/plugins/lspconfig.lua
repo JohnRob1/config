@@ -63,6 +63,7 @@ return {
     }
 
     local ensure_installed = {
+      'deno',
       'lua-language-server',
       'stylua',
       'typescript-language-server',
