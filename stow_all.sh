@@ -21,6 +21,9 @@ stow -R nvim -t ~/.config/nvim
 stow -R tmux -t ~
 tmux source-file ~/.tmux.conf
 
+# herdr
+stow -R herdr -t ~/.config/herdr
+
 # zsh
 stow -R zsh -t ~
 source ~/.zshrc
